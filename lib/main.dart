@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:run_dash/providers/player_controller.dart';
 import 'package:run_dash/providers/screen_controller.dart';
+import 'package:run_dash/providers/train_controller.dart';
 import 'package:run_dash/screens/game.dart';
 import 'package:provider/provider.dart';
 
@@ -13,6 +14,9 @@ void main() {
         ),
         ChangeNotifierProvider(
           create: (context) => PlayerController(),
+        ),
+         ChangeNotifierProvider(
+          create: (context) => TrainController(),
         ),
       ],
       child: const MyApp(),

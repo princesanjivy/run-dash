@@ -4,7 +4,7 @@ import 'package:run_dash/enums/player.dart';
 class PlayerController with ChangeNotifier {
   final double speed = 100;
 
-  double playerXPos = 300; // default 300 as roughly center
+  double playerXPos = 10; // default 300 as roughly center
 
   double boundaryLeft = 0;
   double boundaryRight = 0; // make private
