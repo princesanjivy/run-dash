@@ -1,7 +1,6 @@
 enum PlayerAction {
   left,
   right,
-  jump,
 }
 
 extension PlayerActionExtension on PlayerAction {
@@ -11,8 +10,6 @@ extension PlayerActionExtension on PlayerAction {
         return -1;
       case PlayerAction.right:
         return 1;
-      case PlayerAction.jump:
-        return 99; // 99 refers to jump
     }
   }
 }

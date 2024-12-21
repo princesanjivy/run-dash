@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:run_dash/providers/game_controller.dart';
 import 'package:run_dash/providers/player_controller.dart';
 import 'package:run_dash/providers/screen_controller.dart';
-import 'package:run_dash/providers/train_controller.dart';
 import 'package:run_dash/screens/game.dart';
 import 'package:provider/provider.dart';
+import 'package:run_dash/screens/home.dart';
 
 void main() {
   runApp(
@@ -15,8 +16,8 @@ void main() {
         ChangeNotifierProvider(
           create: (context) => PlayerController(),
         ),
-         ChangeNotifierProvider(
-          create: (context) => TrainController(),
+        ChangeNotifierProvider(
+          create: (context) => GameController(),
         ),
       ],
       child: const MyApp(),
@@ -48,7 +49,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MyGame(),
+      home: Home(),
     );
   }
 }
